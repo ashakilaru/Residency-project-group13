@@ -1,9 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!-- Specifies that the output is a console application (.exe) -->
     <OutputType>Exe</OutputType>
+
+    <!-- Targeting .NET 8 framework to use the latest C# features -->
     <TargetFramework>net8.0</TargetFramework>
+
+     <!-- Enables implicit global using directives for commonly used namespaces -->
     <ImplicitUsings>enable</ImplicitUsings>
+
+     <!-- Enables nullable reference type checks for safer code -->
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
