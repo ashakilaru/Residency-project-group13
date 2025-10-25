@@ -1,0 +1,15 @@
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/bin/Debug/net8.0/BookCatalogSystem
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/bin/Debug/net8.0/BookCatalogSystem.deps.json
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/bin/Debug/net8.0/BookCatalogSystem.runtimeconfig.json
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/bin/Debug/net8.0/BookCatalogSystem.dll
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/bin/Debug/net8.0/BookCatalogSystem.pdb
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/BookCatalogSystem.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/BookCatalogSystem.AssemblyInfoInputs.cache
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/BookCatalogSystem.AssemblyInfo.cs
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/BookCatalogSystem.csproj.CoreCompileInputs.cache
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/BookCatalogSystem.sourcelink.json
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/BookCatalogSystem.dll
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/refint/BookCatalogSystem.dll
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/BookCatalogSystem.pdb
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/BookCatalogSystem.genruntimeconfig.cache
+/Users/ashakilaru/IdeaProjects/assignment4-implementing-control-structures/Residency-project-group13/BookCatalogSystem/CsharpApp/obj/Debug/net8.0/ref/BookCatalogSystem.dll
