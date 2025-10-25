@@ -1,0 +1,83 @@
+=== Book Catalog System ===
+1. Add a Book
+2. List All Books
+3. Search Book by Title, Author, or Genre
+4. Delete Book by ID
+0. Exit
+Enter your choice: 1
+Enter book title: Love in the Air
+Enter author name: Andy 
+Enter genre: Love
+Enter publication year: 2020
+
+✅ Book added successfully!
+
+=== Book Catalog System ===
+1. Add a Book
+2. List All Books
+3. Search Book by Title, Author, or Genre
+4. Delete Book by ID
+0. Exit
+Enter your choice: 1
+Enter book title: Ekvillan
+Enter author name: Bonney
+Enter genre: Horrer
+Enter publication year: 1997
+
+✅ Book added successfully!
+
+=== Book Catalog System ===
+1. Add a Book
+2. List All Books
+3. Search Book by Title, Author, or Genre
+4. Delete Book by ID
+0. Exit
+Enter your choice: 2
+
+📚 Book Catalog:
+ID: 1 | Title: Love in the Air | Author: Andy | Genre: Love | Publication: 2020
+ID: 2 | Title: Ekvillan | Author: Bonney | Genre: Horrer | Publication: 1997
+
+=== Book Catalog System ===
+1. Add a Book
+2. List All Books
+3. Search Book by Title, Author, or Genre
+4. Delete Book by ID
+0. Exit
+Enter your choice: 3
+Enter keyword to search (title, author, or genre): Love
+
+🔍 Search Results:
+ID: 1 | Title: Love in the Air | Author: Andy | Genre: Love | Publication: 2020
+
+=== Book Catalog System ===
+1. Add a Book
+2. List All Books
+3. Search Book by Title, Author, or Genre
+4. Delete Book by ID
+0. Exit
+Enter your choice: 3
+Enter keyword to search (title, author, or genre): 1997 
+
+❌ No books found matching '1997 '.
+
+=== Book Catalog System ===
+1. Add a Book
+2. List All Books
+3. Search Book by Title, Author, or Genre
+4. Delete Book by ID
+0. Exit
+Enter your choice: 4
+Enter book ID to delete: 2
+
+🗑️ Book deleted successfully.
+
+=== Book Catalog System ===
+1. Add a Book
+2. List All Books
+3. Search Book by Title, Author, or Genre
+4. Delete Book by ID
+0. Exit
+Enter your choice: 0
+
+👋 Exiting Book Catalog System. Goodbye!
