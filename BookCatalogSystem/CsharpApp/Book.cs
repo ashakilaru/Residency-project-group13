@@ -8,10 +8,10 @@ public class Book
     public string Genre { get; set; }
     public int PublicationYear { get; set; }
     
-    // Default constructor allows creating an empty book object
+    // Allows creating an empty book object
     public Book() { }
 
-    // Parameterized constructor to initialize a book with all properties
+    // To initialize a book with all properties
     public Book(string title, string author, string genre, int year)
     {
         Title = title;
