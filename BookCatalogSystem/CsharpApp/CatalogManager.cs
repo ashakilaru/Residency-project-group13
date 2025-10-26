@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text.Json;
 using System.IO;
 
+// Manages the collection of books and handles all catalog operations
 public class CatalogManager
 {
+    // Stores the list of books in memory
     public List<Book> Books { get; private set; }
 
     public CatalogManager()
@@ -14,6 +16,7 @@ public class CatalogManager
         LoadBooks();
     }
 
+     // Adds a new book to the catalog
     public void AddBook(Book book)
     {
         Books.Add(book);
@@ -21,6 +24,7 @@ public class CatalogManager
         SaveBooks();
     }
 
+     // Removes a book by its title 
     public void RemoveBook(string title)
     {
         var bookToRemove = Books.FirstOrDefault(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
@@ -36,21 +40,25 @@ public class CatalogManager
         }
     }
 
+     // Searches books by title
     public List<Book> SearchByTitle(string title)
     {
         return Books.Where(b => b.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
     }
 
+    // Searches books by author
     public List<Book> SearchByAuthor(string author)
     {
         return Books.Where(b => b.Author.Contains(author, StringComparison.OrdinalIgnoreCase)).ToList();
     }
 
+    // Searches books by genre
     public List<Book> SearchByGenre(string genre)
     {
         return Books.Where(b => b.Genre.Equals(genre, StringComparison.OrdinalIgnoreCase)).ToList();
     }
 
+     // Displays all books in the catalog to the console
     public void DisplayBooks()
     {
         if (Books.Count == 0)
@@ -65,6 +73,7 @@ public class CatalogManager
         }
     }
 
+    // Generates a simple report of books grouped by genre
     public void ReportByGenre()
     {
         if (Books.Count == 0)
@@ -73,6 +82,7 @@ public class CatalogManager
             return;
         }
 
+        // Group books by genre and count them
         var report = Books.GroupBy(b => b.Genre)
                           .Select(g => new { Genre = g.Key, Count = g.Count() });
 
@@ -83,6 +93,7 @@ public class CatalogManager
         }
     }
 
+    // Saves the current list of books to a JSON file
     private void SaveBooks()
     {
         try
@@ -95,6 +106,7 @@ public class CatalogManager
         }
     }
 
+     // Loads books from the JSON file if it exists
     private void LoadBooks()
     {
         try
