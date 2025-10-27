@@ -27,3 +27,19 @@ git clone https://github.com/yourusername/Residency-project-group13.git
 Example : /workspaces/Residency-project-group13/BookCatalogSystem/RubyApp (main) $ ruby book_catalog.rb
 Give the selection
 
+## OUTPUT
+Run ruby main.rb
+
+
+# C#'
+## Requirements
+- NEED 8+ .net version
+- Terminal or command-line environment
+
+
+# Output
+run dotnet build
+run dotnet run
+
+
+
