@@ -1,32 +1,23 @@
 [
   {
-    "Title": "Affection",
-    "Author": "Mark Goya",
-    "Genre": "Friction",
-    "PublicationYear": 2017
-  },
-  {
-    "Title": "Affection",
-    "Author": "Mark Goya",
+    "Title": "Paris",
+    "Author": "Emily",
     "Genre": "Love",
-    "PublicationYear": 2017
+    "PublicationYear": 2015,
+    "Quantity": 2
   },
   {
-    "Title": "Affection",
-    "Author": "Mark Goya",
-    "Genre": "Friction",
-    "PublicationYear": 2017
+    "Title": "deep work",
+    "Author": "cal newport",
+    "Genre": "productivity",
+    "PublicationYear": 2016,
+    "Quantity": 1
   },
   {
-    "Title": "Hell of the water",
-    "Author": "John",
-    "Genre": "Horrer",
-    "PublicationYear": 2001
-  },
-  {
-    "Title": "River",
-    "Author": "Veronica",
-    "Genre": "Fantacy",
-    "PublicationYear": 2018
+    "Title": "clean code",
+    "Author": "robert",
+    "Genre": "technology",
+    "PublicationYear": 2008,
+    "Quantity": 3
   }
 ]

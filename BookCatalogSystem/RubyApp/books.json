@@ -4,6 +4,31 @@
     "title": "Love in the Air",
     "author": "Andy",
     "genre": "Love",
-    "publication_year": "2020"
+    "publication_year": "2020",
+    "quantity": 2
+  },
+  {
+    "id": 2,
+    "title": "Summer in the city",
+    "author": "John",
+    "genre": "Horrer",
+    "publication_year": "2011",
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "title": "PARIS",
+    "author": "emily",
+    "genre": "love",
+    "publication_year": "1998",
+    "quantity": 1
+  },
+  {
+    "id": 4,
+    "title": "Love in the Air",
+    "author": "Andy gore",
+    "genre": "Friction",
+    "publication_year": "2020",
+    "quantity": 1
   }
 ]

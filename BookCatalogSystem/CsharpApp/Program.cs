@@ -4,101 +4,108 @@ class Program
 {
     static void Main()
     {
-         // Initialize the catalog manager, which handles all book operations
         CatalogManager catalog = new CatalogManager();
-        bool exit = false;
+        bool running = true;
 
-         // Main loop: repeatedly display the menu until the user chooses to exit
-        while (!exit)
+        while (running)
         {
-            // Display menu options to the user
-            Console.WriteLine("\n--- Book Catalog System ---");
-            Console.WriteLine("1. Add Book");
-            Console.WriteLine("2. Remove Book");
+            Console.WriteLine("\n=== Book Catalog System ===");
+            Console.WriteLine("1. Add a Book");
+            Console.WriteLine("2. List All Books");
             Console.WriteLine("3. Search Book by Title");
             Console.WriteLine("4. Search Book by Author");
             Console.WriteLine("5. Search Book by Genre");
-            Console.WriteLine("6. Display All Books");
+            Console.WriteLine("6. Delete Book");
             Console.WriteLine("7. Report by Genre");
+            Console.WriteLine("8. Report by Author");
             Console.WriteLine("0. Exit");
-            Console.Write("Enter your choice: ");
+            Console.Write("Choose an option: ");
 
-             // Read user input
-            string choice = Console.ReadLine();
+            string? input = Console.ReadLine();
+            Console.WriteLine();
 
-             // Handle menu selection using a switch statement
-            switch (choice)
+            switch (input)
             {
                 case "1":
-                     // Prompt user for book details
-                    Console.Write("Title: "); string title = Console.ReadLine();
-                    Console.Write("Author: "); string author = Console.ReadLine();
-                    Console.Write("Genre: "); string genre = Console.ReadLine();
+                    // Add a book
+                    Console.Write("Title: ");
+                    string title = Console.ReadLine() ?? "";
+                    Console.Write("Author: ");
+                    string author = Console.ReadLine() ?? "";
+                    Console.Write("Genre: ");
+                    string genre = Console.ReadLine() ?? "";
                     Console.Write("Publication Year: ");
+                    int year = int.TryParse(Console.ReadLine(), out int y) ? y : 0;
+                    Console.Write("Quantity: ");
+                    int qty = int.TryParse(Console.ReadLine(), out int q) ? q : 1;
 
-                    // Validate the year input; add book if valid
-                    if (int.TryParse(Console.ReadLine(), out int year))
-                    {
-                        catalog.AddBook(new Book(title, author, genre, year));
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid year. Book not added.");
-                    }
+                    catalog.AddBook(new Book(title, author, genre, year, qty));
                     break;
 
                 case "2":
-                    Console.Write("Title to remove: "); string removeTitle = Console.ReadLine();
-                    catalog.RemoveBook(removeTitle);
-                    break;
-
-                case "3":
-                    Console.Write("Search title: "); string searchTitle = Console.ReadLine();
-                    DisplaySearchResults(catalog.SearchByTitle(searchTitle));
-                    break;
-
-                case "4":
-                    Console.Write("Search author: "); string searchAuthor = Console.ReadLine();
-                    DisplaySearchResults(catalog.SearchByAuthor(searchAuthor));
-                    break;
-
-                case "5":
-                    Console.Write("Search genre: "); string searchGenre = Console.ReadLine();
-                    DisplaySearchResults(catalog.SearchByGenre(searchGenre));
-                    break;
-
-                case "6":
+                    // List all books
                     catalog.DisplayBooks();
                     break;
 
+                case "3":
+                    // Search by title
+                    Console.Write("Enter title to search: ");
+                    string searchTitle = Console.ReadLine() ?? "";
+                    var titleResults = catalog.SearchByTitle(searchTitle);
+                    if (titleResults.Count == 0)
+                        Console.WriteLine("No books found with that title.");
+                    else
+                        foreach (var b in titleResults)
+                            Console.WriteLine($"{b.Title} | {b.Author} | {b.Genre} | {b.PublicationYear} | Stock: {b.Quantity}");
+                    break;
+
+                case "4":
+                    // Search by author
+                    Console.Write("Enter author to search: ");
+                    string searchAuthor = Console.ReadLine() ?? "";
+                    var authorResults = catalog.SearchByAuthor(searchAuthor);
+                    if (authorResults.Count == 0)
+                        Console.WriteLine("No books found for that author.");
+                    else
+                        foreach (var b in authorResults)
+                            Console.WriteLine($"{b.Title} | {b.Author} | {b.Genre} | {b.PublicationYear} | Stock: {b.Quantity}");
+                    break;
+
+                case "5":
+                    // Search by genre
+                    Console.Write("Enter genre to search: ");
+                    string searchGenre = Console.ReadLine() ?? "";
+                    var genreResults = catalog.SearchByGenre(searchGenre);
+                    if (genreResults.Count == 0)
+                        Console.WriteLine("No books found in that genre.");
+                    else
+                        foreach (var b in genreResults)
+                            Console.WriteLine($"{b.Title} | {b.Author} | {b.Genre} | {b.PublicationYear} | Stock: {b.Quantity}");
+                    break;
+
+                case "6":
+                    // Delete book
+                    catalog.RemoveBook();
+                    break;
+
                 case "7":
-                      // Generate a report showing the number of books per genre
+                    // Report by genre
                     catalog.ReportByGenre();
                     break;
 
+                case "8":
+                    // Report by author
+                    catalog.ReportByAuthor();
+                    break;
+
                 case "0":
-                    exit = true;
+                    running = false;
+                    Console.WriteLine("Exiting...");
                     break;
 
                 default:
-                    Console.WriteLine("Invalid choice.");
+                    Console.WriteLine("Invalid option. Try again.");
                     break;
-            }
-        }
-    }
-
-     // Helper method to display search results in a readable format
-    static void DisplaySearchResults(System.Collections.Generic.List<Book> results)
-    {
-        if (results.Count == 0)
-        {
-            Console.WriteLine("No books found.");
-        }
-        else
-        {
-            foreach (var book in results)
-            {
-                Console.WriteLine(book.ToString());
             }
         }
     }
